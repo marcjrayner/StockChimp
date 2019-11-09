@@ -1,5 +1,5 @@
 require_relative('../models/supplier.rb')
-require('pry')
+require('pry-byebug')
 
 supplier1 = Supplier.new({
   'company_name' => 'Generic IT Distribution',
