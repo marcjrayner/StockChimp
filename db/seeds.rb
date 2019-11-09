@@ -9,5 +9,7 @@ supplier1 = Supplier.new({
   'contact_phone_number' => '0330 123 5986'
   })
 
-binding.pry
+supplier1.save()
+
+binding.pry()
 nil
