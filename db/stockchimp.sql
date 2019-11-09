@@ -15,6 +15,7 @@ CREATE TABLE items
   id SERIAL8 PRIMARY KEY,
   part_number VARCHAR(255),
   manufacturer VARCHAR(255),
+  description VARCHAR(255),
   category VARCHAR(255),
   condition VARCHAR(255),
   status VARCHAR(255),

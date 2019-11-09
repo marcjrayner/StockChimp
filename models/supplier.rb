@@ -32,7 +32,7 @@ class Supplier
     values = [@company_name, @address, @contact_name, @contact_job_title,
       @contact_phone_number]
     results = SqlRunner.run(sql, values)
-    @id = results.[0]['id'].to_i
+    @id = results[0]['id'].to_i
   end
 
   def update()
@@ -51,7 +51,7 @@ class Supplier
     WHERE id = $6"
     values = [@company_name, @address, @contact_name, @contact_job_title,
       @contact_phone_number, @id]
-    SqlRunner.run( sql, values )
+    SqlRunner.run(sql, values)
   end
 
   def delete()
