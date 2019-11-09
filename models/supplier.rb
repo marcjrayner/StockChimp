@@ -30,6 +30,14 @@ class Supplier
     @id = results.first()['id'].to_i
   end
 
+  def delete()
+  sql = "DELETE FROM suppliers
+  WHERE id = $1"
+  values = [@id]
+  SqlRunner.run(sql, values)
+end
+
+
   def self.all()
     sql = "SELECT * FROM suppliers;"
     suppliers = SqlRunner.run(sql)
@@ -43,5 +51,11 @@ class Supplier
     s = SqlRunner.run(sql, values)
     return Supplier.new(s.first)
   end
+
+  def self.delete_all
+    sql = "DELETE FROM suppliers"
+    SqlRunner.run(sql)
+  end
+
 
 end
