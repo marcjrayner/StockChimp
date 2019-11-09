@@ -1,0 +1,11 @@
+<h1>Inventory</h1>
+
+<p class="">
+  <a class="" href="">New item</a>
+</p>
+
+<ul>
+  <% for item in @items %>
+  <li><p><%= item.part_number %> </p></li>
+  <% end %>
+</ul>
