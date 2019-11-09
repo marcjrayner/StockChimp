@@ -24,10 +24,24 @@ class Supplier
     (
       $1, $2, $3, $4, $5
     )
-    RETURNING id"
+    RETURNING id;"
     values = [@company_name, @address, @contact_name, @contact_job_title, @contact_phone_number]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
+  end
+
+  def self.all()
+    sql = "SELECT * FROM suppliers;"
+    suppliers = SqlRunner.run(sql)
+    return suppliers.map { |s| Supplier.new(s) }
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM suppliers
+    WHERE id = $1;"
+    values = [id]
+    s = SqlRunner.run(sql, values)
+    return Supplier.new(s.first)
   end
 
 end
