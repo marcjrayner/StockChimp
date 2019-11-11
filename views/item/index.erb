@@ -4,8 +4,33 @@
   <a class="" href="">New item</a>
 </p>
 
-<ul>
+<table style="width:100%">
+  <tr>
+    <th>Manufacturer</th>
+    <th>Part Number</th>
+    <th>Description</th>
+    <th>Category</th>
+    <th>Condition</th>
+    <th>Status</th>
+    <th>Quantity</th>
+    <th>Supplier</th>
+    <th>Buy Price</th>
+    <th>Sell Price</th>
+    <th>Min Price</th>
+  </tr>
   <% for item in @items %>
-  <li><p><%= item.part_number %> </p></li>
+  <tr>
+    <td><%= item.manufacturer %></td>
+    <td><%= item.part_number %></td>
+    <td><%= item.description %></td>
+    <td><%= item.category %></td>
+    <td><%= item.condition %></td>
+    <td><%= item.status %></td>
+    <td><%= item.quantity %></td>
+    <td><%= item.supplier_id %></td>
+    <td><%= item.unit_buy_price %></td>
+    <td><%= item.target_sell_price %></td>
+    <td><%= item.min_sell_price %></td>
+  </tr>
   <% end %>
-</ul>
+</table>

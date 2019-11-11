@@ -4,8 +4,21 @@
   <a class="" href="">New supplier</a>
 </p>
 
-<ul>
+<table style="width:100%">
+  <tr>
+    <th>Company</th>
+    <th>Address</th>
+    <th>Contact Name</th>
+    <th>Contact Job Title</th>
+    <th>Contact Phone Number</th>
+  </tr>
   <% for supplier in @suppliers %>
-  <li><p><%= supplier.company_name %> </p></li>
+  <tr>
+    <td><%= supplier.company_name %></td>
+    <td><%= supplier.address %></td>
+    <td><%= supplier.contact_name %></td>
+    <td><%= supplier.contact_job_title%></td>
+    <td><%= supplier.contact_phone_number %></td>
+  </tr>
   <% end %>
-</ul>
+</table>
