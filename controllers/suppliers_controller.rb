@@ -19,6 +19,11 @@ get '/suppliers/:id' do
   erb (:"supplier/show")
 end
 
+get '/suppliers/edit/:id' do
+  @supplier = Supplier.find(params['id'].to_i)
+  erb (:"supplier/edit")
+end
+
 post '/suppliers' do
   supplier = Supplier.new(params)
   supplier.save
