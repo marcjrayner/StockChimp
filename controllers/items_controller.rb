@@ -10,9 +10,9 @@ get '/inventory' do
   erb ( :"item/index" )
 end
 
-# get '/inventory/new' do
-#   erb (:"item/new")
-# end
+get '/inventory/new' do
+  erb (:"item/new")
+end
 
 get '/inventory/:id' do
   @item = Item.find(params['id'].to_i)
