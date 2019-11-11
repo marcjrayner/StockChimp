@@ -19,6 +19,7 @@ get '/suppliers/new' do
   erb (:"supplier/new")
 end
 
+
 post '/suppliers' do
   supplier = Supplier.new(params)
   supplier.save
