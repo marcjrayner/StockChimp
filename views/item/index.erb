@@ -21,7 +21,7 @@
   <% for item in @items %>
   <tr>
     <td><%= item.manufacturer %></td>
-    <td><%= item.part_number %></td>
+    <td><a href="inventory/<%= item.id %>"><%= item.part_number %></a></td>
     <td><%= item.description %></td>
     <td><%= item.category %></td>
     <td><%= item.condition %></td>
