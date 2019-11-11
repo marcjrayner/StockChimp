@@ -24,7 +24,6 @@ get '/inventory/edit/:id' do
   erb (:"item/edit")
 end
 
-
 post '/inventory' do
   item = Item.new(params)
   item.save
