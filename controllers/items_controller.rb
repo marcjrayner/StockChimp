@@ -18,9 +18,9 @@ get '/inventory/:id' do
   @item = Item.find(params['id'].to_i)
   erb (:"item/show")
 end
-#
-# post '/suppliers' do
-#   supplier = Supplier.new(params)
-#   supplier.save
-#   redirect to '/suppliers'
-# end
+
+post '/inventory' do
+  item = Item.new(params)
+  item.save
+  redirect to '/inventory'
+end
