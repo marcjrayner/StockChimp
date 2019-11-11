@@ -16,8 +16,8 @@ class Item
     @category = options['category']
     @condition = options['condition']
     @status = options['status']
-    @quantity = options['quantity']
-    @supplier_id = options['supplier_id']
+    @quantity = options['quantity'].to_i
+    @supplier_id = options['supplier_id'].to_i
     @unit_buy_price = options['unit_buy_price']
     @target_sell_price = options['target_sell_price']
     @min_sell_price = options['min_sell_price']
@@ -81,6 +81,23 @@ class Item
     WHERE id = $1"
     values = [@id]
     SqlRunner.run(sql, values)
+  end
+  #
+  # def get_supplier()
+  #   sql = "SELECT * FROM suppliers
+  #   WHERE id = $1"
+  #   values = [@supplier_id]
+  #   result = SqlRunner.run(sql, values)
+  #   if result == nil
+  #     return "no supplier"
+  #   else
+  #     return Supplier.new(result)
+  #   end
+  # end
+
+  def get_supplier()
+    supplier = Supplier.find(supplier_id)
+    return supplier
   end
 
   def self.all()
