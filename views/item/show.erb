@@ -6,7 +6,7 @@
 <h3>Condition: <%= @item.condition()%> </h3>
 <h3>Quantity in Stock: <%= @item.quantity()%> </h3>
 <h3>Status: <%= @item.status()%> </h3>
-<h3>Supplier: <%= @item.supplier_id()%> </h3>
+<h3>Supplier: <a href="/suppliers/<%= @item.supplier_id %>"><%=@item.get_supplier.company_name()%></a> </h3>
 <h3>Unit Buy Price: <%= @item.unit_buy_price()%> </h3>
 <h3>Target Sell Price: <%= @item.target_sell_price()%> </h3>
 <h3>Minimum Sell Price: <%= @item.min_sell_price()%> </h3>
