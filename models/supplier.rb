@@ -61,6 +61,14 @@ class Supplier
     SqlRunner.run(sql, values)
   end
 
+  def get_items()
+    sql = "SELECT * FROM items
+    WHERE supplier_id = $1"
+    values = [@id]
+    results = SqlRunner.run(sql, values)
+    return results.map { |i| Item.new(i) }
+  end
+
   def self.all()
     sql = "SELECT * FROM suppliers;"
     suppliers = SqlRunner.run(sql)
@@ -72,7 +80,7 @@ class Supplier
     WHERE id = $1;"
     values = [id]
     s = SqlRunner.run(sql, values)
-    return Supplier.new(s[0])
+    return Supplier.new(s.first)
   end
 
   def self.delete_all

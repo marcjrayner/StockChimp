@@ -4,6 +4,37 @@
 <h3>Contact: <%= @supplier.contact_name()%> </h3>
 <h3>Contact Job Title: <%= @supplier.contact_job_title()%> </h3>
 <h3>Contact Phone Number: <%= @supplier.contact_phone_number()%> </h3>
+<h3>Items bought from <%= @supplier.company_name %>: </h3>
+<table style="width:100%">
+  <tr>
+    <th>Manufacturer</th>
+    <th>Part Number</th>
+    <th>Description</th>
+    <th>Category</th>
+    <th>Condition</th>
+    <th>Status</th>
+    <th>Quantity</th>
+    <th>Supplier</th>
+    <th>Buy Price</th>
+    <th>Sell Price</th>
+    <th>Min Price</th>
+  </tr>
+  <% for item in @supplier.get_items %>
+  <tr>
+    <td><%= item.manufacturer %></td>
+    <td><a href="inventory/<%= item.id %>"><%= item.part_number %></a></td>
+    <td><%= item.description %></td>
+    <td><%= item.category %></td>
+    <td><%= item.condition %></td>
+    <td><%= item.status %></td>
+    <td><%= item.quantity %></td>
+    <td><%= item.supplier_id %></td>
+    <td><%= item.unit_buy_price %></td>
+    <td><%= item.target_sell_price %></td>
+    <td><%= item.min_sell_price %></td>
+  </tr>
+  <% end %>
+</table>
 
 <p class="">
   <a class=""href="/suppliers/edit/<%=@supplier.id%>">Edit supplier</a>
