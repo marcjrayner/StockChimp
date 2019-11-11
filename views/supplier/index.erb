@@ -8,13 +8,14 @@
   <tr>
     <th>Company</th>
     <th>Address</th>
-    <th>Contact Name</th>
+    <th>Main Contact Name</th>
     <th>Contact Job Title</th>
     <th>Contact Phone Number</th>
   </tr>
   <% for supplier in @suppliers %>
   <tr>
-    <td><%= supplier.company_name %></td>
+    <td><a href="suppliers/<%= supplier.id %>"><%= supplier.company_name %></a>
+    </td>
     <td><%= supplier.address %></td>
     <td><%= supplier.contact_name %></td>
     <td><%= supplier.contact_job_title%></td>
