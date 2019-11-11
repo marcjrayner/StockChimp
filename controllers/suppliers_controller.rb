@@ -14,3 +14,13 @@ get '/suppliers/:id' do
   @supplier = Supplier.find(params['id'].to_i)
   erb (:"supplier/show")
 end
+
+get '/suppliers/new' do
+  erb (:"supplier/new")
+end
+
+post '/suppliers' do
+  supplier = Supplier.new(params)
+  supplier.save
+  redirect to '/suppliers'
+end
