@@ -19,6 +19,12 @@ get '/inventory/:id' do
   erb (:"item/show")
 end
 
+get '/inventory/edit/:id' do
+  @item = Item.find(params['id'].to_i)
+  erb (:"item/edit")
+end
+
+
 post '/inventory' do
   item = Item.new(params)
   item.save
