@@ -7,5 +7,10 @@ also_reload( '../models/*' )
 
 get '/suppliers' do
   @suppliers = Supplier.all
-  erb ( :"supplier/index" )
+  erb (:"supplier/index")
+end
+
+get '/suppliers/:id' do
+  @supplier = Supplier.find(params['id'].to_i)
+  erb (:"supplier/show")
 end
