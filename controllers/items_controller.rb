@@ -11,6 +11,7 @@ get '/inventory' do
 end
 
 get '/inventory/new' do
+  @suppliers = Supplier.all
   erb (:"item/new")
 end
 

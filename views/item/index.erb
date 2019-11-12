@@ -4,20 +4,22 @@
   <a class="" href="/inventory/new">New item</a>
 </p>
 
-<table style="width:100%">
+<table class="sortable">
+  <thead>
   <tr>
     <th>Manufacturer</th>
     <th>Part Number</th>
     <th>Description</th>
     <th>Category</th>
-    <th>Condition</th>
-    <th>Status</th>
     <th>Quantity</th>
+    <th>Condition</th>
     <th>Supplier</th>
     <th>Buy Price</th>
     <th>Sell Price</th>
-    <th>Min Price</th>
+    <th>Status</th>
   </tr>
+  </thead>
+  <tbody>
   <% for item in @items %>
     <% if item.quantity > 5 %>
       <tr>
@@ -25,28 +27,27 @@
         <td><a href="inventory/<%= item.id %>"><%= item.part_number %></a></td>
         <td><%= item.description %></td>
         <td><%= item.category %></td>
-        <td><%= item.condition %></td>
-        <td><%= item.status %></td>
         <td><%= item.quantity %></td>
+        <td><%= item.condition %></td>
         <td><%= item.get_supplier.company_name %></td>
         <td><%= item.unit_buy_price %></td>
         <td><%= item.target_sell_price %></td>
-        <td><%= item.min_sell_price %></td>
+        <td><%= item.status %></td>
       </tr>
     <% else %>
-    <tr bgcolor="indianred">
+    <tr bgcolor="gold">
       <td><%= item.manufacturer %></td>
       <td><a href="inventory/<%= item.id %>"><%= item.part_number %></a></td>
       <td><%= item.description %></td>
       <td><%= item.category %></td>
-      <td><%= item.condition %></td>
-      <td><%= item.status %></td>
       <td><%= item.quantity %></td>
+      <td><%= item.condition %></td>
       <td><%= item.get_supplier.company_name %></td>
       <td><%= item.unit_buy_price %></td>
       <td><%= item.target_sell_price %></td>
-      <td><%= item.min_sell_price %></td>
+      <td><%= item.status %></td>
     </tr>
     <% end %>
   <% end %>
+  </tbody>
 </table>
