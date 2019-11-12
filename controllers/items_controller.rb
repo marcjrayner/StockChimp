@@ -29,3 +29,9 @@ post '/inventory' do
   item.save
   redirect to '/inventory'
 end
+
+post '/inventory/:id' do
+  item = Item.new(params)
+  item.update
+  redirect to '/inventory'
+end
