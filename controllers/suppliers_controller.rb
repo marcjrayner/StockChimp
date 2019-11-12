@@ -29,3 +29,9 @@ post '/suppliers' do
   supplier.save
   redirect to '/suppliers'
 end
+
+post '/suppliers/:id' do
+  supplier = Supplier.new(params)
+  supplier.update
+  redirect to '/suppliers'
+end

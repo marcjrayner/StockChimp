@@ -2,32 +2,21 @@
 
 <form method="POST" action="/suppliers/<%= @supplier.id %>">
 
-  <label for="company_name">First Name:</label>
+  <label for="company_name">Company Name:</label>
   <input type="text" name="company_name" id="company_name" value="<%= @supplier.company_name%>"/>
 
-  <label for="contact_name">Last Name:</label>
+  <label for="address">Address:</label>
+  <input type="text" name="address" id="address" value="<%= @supplier.address%>"/>
+
+  <label for="contact_name">Contact Name:</label>
   <input type="text" name="contact_name" id="contact_name" value="<%= @supplier.contact_name%>"/>
 
+  <label for="contact_job_title">Contact Job Title:</label>
+  <input type="text" name="contact_job_title" id="contact_job_title" value="<%= @supplier.contact_job_title%>"/>
 
-      <input type="submit" value="Update Supplier Record"/>
+  <label for="contact_phone_number">Contact Phone Number:</label>
+  <input type="text" name="contact_phone_number" id="contact_phone_number" value="<%= @supplier.contact_job_title%>"/>
 
+  <input type="submit" value="Update Supplier Record"/>
 
 </form>
-
-
-
-      <label for="house_select">Select House:</label>
-      <select name="house_id" id="house_select" selected="<%= @student.house_id  %>">
-        <% @houses.each do |house| %>
-          <% if house.id == @student.house_id %>
-            <option value=<%= house.id %> selected><%= house.name.capitalize %></option>
-          <% else %>
-            <option value=<%= house.id %>><%= house.name.capitalize %></option>
-          <% end %>
-        <% end %>
-      </select>
-
-
-
-      <label for="age">Age:</label>
-      <input type="number" name="age" id="age" value="<%= @student.age %>"/>
