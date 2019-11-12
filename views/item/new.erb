@@ -1,14 +1,14 @@
 <h1>Add Line Item to Inventory</h1>
 
 <form action="/inventory" method="post">
-  <div class="form-wrapper">
+  <div class="form-wrap">
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="part_number"> Part Number:</label>
     <input type="text" name="part_number" id="part_number"/>
   </div>
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="manufacturer"> Select Manufacturer:</label>
     <select name="manufacturer" id="manufacturer">
       <option value="AMD">AMD</option>
@@ -23,12 +23,12 @@
     </select>
   </div>
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="description"> Description:</label>
     <input type="text" name="description" id="description"/>
   </div>
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="category"> Select Category:</label>
     <select name="category" id="category">
       <option value="CPU">CPU</option>
@@ -38,7 +38,7 @@
     </select>
   </div>
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="condition"> Select Condition:</label>
     <select name="condition" id="condition">
       <option value="New">New</option>
@@ -47,17 +47,17 @@
     </select>
   </div>
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="status"> Status:</label>
     <input readonly value="Inbound" name="status" id="status"/>
   </div>
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="quantity"> Quantity:</label>
     <input type="number" name="quantity" id="quantity"/>
   </div>
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="supplier_id">Select Supplier:</label>
       <select name="supplier_id" id="supplier_id">
         <% @suppliers.each do |supplier| %>
@@ -66,22 +66,22 @@
       </select>
   </div>
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="unit_buy_price"> Unit Buy Price:  $</label>
     <input type="number" min="0.01" step="0.01" name="unit_buy_price" id="unit_buy_price"/>
   </div>
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="target_sell_price"> Target Sell Price:  $</label>
     <input <input type="number" min="0.01" step="0.01" name="target_sell_price" id="target_sell_price"/>
   </div>
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="min_sell_price"> Minimum Sell Price:  $</label>
     <input <input type="number" min="0.01" step="0.01" name="min_sell_price" id="min_sell_price"/>
   </div>
 
-  <div class="form-el">
+  <div class="form-entry">
     <input class="" type='submit' value="Create Line Item">
   </div>
 

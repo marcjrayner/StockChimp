@@ -21,8 +21,8 @@
   </thead>
   <tbody>
   <% for item in @items %>
-    <% if item.quantity > 5 %>
-      <tr>
+    <% if item.quantity == 0 %>
+      <tr bgcolor="darksalmon">
         <td><%= item.manufacturer %></td>
         <td><a href="inventory/<%= item.id %>"><%= item.part_number %></a></td>
         <td><%= item.description %></td>
@@ -32,10 +32,23 @@
         <td><%= item.get_supplier.company_name %></td>
         <td><%= item.unit_buy_price %></td>
         <td><%= item.target_sell_price %></td>
-        <td><%= item.status %></td>
+        <td>Out of Stock!</td>
       </tr>
-    <% else %>
+    <% elsif item.quantity > 0 && item.quantity <=5 %>
     <tr bgcolor="gold">
+      <td><%= item.manufacturer %></td>
+      <td><a href="inventory/<%= item.id %>"><%= item.part_number %></a></td>
+      <td><%= item.description %></td>
+      <td><%= item.category %></td>
+      <td><%= item.quantity %></td>
+      <td><%= item.condition %></td>
+      <td><%= item.get_supplier.company_name %></td>
+      <td><%= item.unit_buy_price %></td>
+      <td><%= item.target_sell_price %></td>
+      <td>Low Stock!</td>
+    </tr>
+    <% else %>
+    <tr>
       <td><%= item.manufacturer %></td>
       <td><a href="inventory/<%= item.id %>"><%= item.part_number %></a></td>
       <td><%= item.description %></td>
