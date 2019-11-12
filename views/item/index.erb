@@ -19,18 +19,34 @@
     <th>Min Price</th>
   </tr>
   <% for item in @items %>
-  <tr>
-    <td><%= item.manufacturer %></td>
-    <td><a href="inventory/<%= item.id %>"><%= item.part_number %></a></td>
-    <td><%= item.description %></td>
-    <td><%= item.category %></td>
-    <td><%= item.condition %></td>
-    <td><%= item.status %></td>
-    <td><%= item.quantity %></td>
-    <td><%= item.get_supplier.company_name %></td>
-    <td><%= item.unit_buy_price %></td>
-    <td><%= item.target_sell_price %></td>
-    <td><%= item.min_sell_price %></td>
-  </tr>
+    <% if item.quantity > 5 %>
+      <tr>
+        <td><%= item.manufacturer %></td>
+        <td><a href="inventory/<%= item.id %>"><%= item.part_number %></a></td>
+        <td><%= item.description %></td>
+        <td><%= item.category %></td>
+        <td><%= item.condition %></td>
+        <td><%= item.status %></td>
+        <td><%= item.quantity %></td>
+        <td><%= item.get_supplier.company_name %></td>
+        <td><%= item.unit_buy_price %></td>
+        <td><%= item.target_sell_price %></td>
+        <td><%= item.min_sell_price %></td>
+      </tr>
+    <% else %>
+    <tr bgcolor="indianred">
+      <td><%= item.manufacturer %></td>
+      <td><a href="inventory/<%= item.id %>"><%= item.part_number %></a></td>
+      <td><%= item.description %></td>
+      <td><%= item.category %></td>
+      <td><%= item.condition %></td>
+      <td><%= item.status %></td>
+      <td><%= item.quantity %></td>
+      <td><%= item.get_supplier.company_name %></td>
+      <td><%= item.unit_buy_price %></td>
+      <td><%= item.target_sell_price %></td>
+      <td><%= item.min_sell_price %></td>
+    </tr>
+    <% end %>
   <% end %>
 </table>
