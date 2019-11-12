@@ -1,40 +1,67 @@
 <h2>Edit Record for <%= @item.manufacturer%> <%=@item.part_number %></h2>
 
 <form method="POST" action="/inventory/<%= @item.id %>">
+  <div class="form-wrapper">
 
-  <label for="part_number">Part Number:</label>
-  <input type="text" name="part_number" id="part_number" value="<%= @item.part_number%>"/>
+  <div class="form-el">
+    <label for="part_number">Part Number:</label>
+    <input type="text" name="part_number" id="part_number" value="<%= @item.part_number%>"/>
+  </div>
 
-  <label for="manufacturer">Manufacturer:</label>
-  <input type="text" name="manufacturer" id="manufacturer" value="<%= @item.manufacturer%>"/>
+  <div class="form-el">
+    <label for="manufacturer">Manufacturer:</label>
+    <input type="text" name="manufacturer" id="manufacturer" value="<%= @item.manufacturer%>"/>
+  </div>
 
-  <label for="description"> Description:</label>
-  <input type="text" name="description" id="description" value="<%= @item.description%>"/>
+  <div class="form-el">
+    <label for="description"> Description:</label>
+    <input type="text" name="description" id="description" value="<%= @item.description%>"/>
+  </div>
 
-  <label for="category">Category:</label>
-  <input type="text" name="category" id="category" value="<%= @item.category%>"/>
+  <div class="form-el">
+    <label for="category">Category:</label>
+    <input type="text" name="category" id="category" value="<%= @item.category%>"/>
+  </div>
 
-  <label for="condition">Condition:</label>
-  <input type="text" name="condition" id="condition" value="<%= @item.condition%>"/>
+  <div class="form-el">
+    <label for="condition">Condition:</label>
+    <input type="text" name="condition" id="condition" value="<%= @item.condition%>"/>
+  </div>
 
-  <label for="status">Status:</label>
-  <input type="text" name="status" id="status" value="<%= @item.status%>"/>
+  <div class="form-el">
+    <label for="status">Status:</label>
+    <input type="text" name="status" id="status" value="<%= @item.status%>"/>
+  </div>
 
-  <label for="quantity">Quantity:</label>
-  <input type="text" name="quantity" id="quantity" value="<%= @item.quantity%>"/>
+  <div class="form-el">
+    <label for="quantity">Quantity:</label>
+    <input type="text" name="quantity" id="quantity" value="<%= @item.quantity%>"/>
+  </div>
 
-  <label for="supplier_id">Supplier ID:</label>
-  <input type="text" name="supplier_id" id="supplier_id" value="<%= @item.supplier_id%>"/>
+  <div class="form-el">
+    <label for="supplier_id">Supplier ID:</label>
+    <input type="text" name="supplier_id" id="supplier_id" value="<%= @item.supplier_id%>"/>
+  </div>
 
-  <label for="unit_buy_price">Unit Buy Price:</label>
-  <input type="text" name="unit_buy_price" id="unit_buy_price" value="<%= @item.unit_buy_price%>"/>
+  <div class="form-el">
+    <label for="unit_buy_price">Unit Buy Price:</label>
+    <input type="text" name="unit_buy_price" id="unit_buy_price" value="<%= @item.unit_buy_price%>"/>
+  </div>
 
-  <label for="target_sell_price">Target Sell Price:</label>
-  <input type="text" name="target_sell_price" id="target_sell_price" value="<%= @item.target_sell_price%>"/>
+  <div class="form-el">
+    <label for="target_sell_price">Target Sell Price:</label>
+    <input type="text" name="target_sell_price" id="target_sell_price" value="<%= @item.target_sell_price%>"/>
+  </div>
 
-  <label for="min_sell_price">Minimum Sell Price:</label>
-  <input type="text" name="min_sell_price" id="min_sell_price" value="<%= @item.min_sell_price%>"/>
+  <div class="form-el">
+    <label for="min_sell_price">Minimum Sell Price:</label>
+    <input type="text" name="min_sell_price" id="min_sell_price" value="<%= @item.min_sell_price%>"/>
+  </div>
 
-  <input type="submit" value="Update Item Record"/>
+  <div class="form-el">
+    <input type="submit" value="Update Item Record"/>
+  </div>
 
+
+  </div>
 </form>
