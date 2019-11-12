@@ -9,8 +9,19 @@
   </div>
 
   <div class="form-el">
-    <label for="manufacturer">Manufacturer:</label>
-    <input type="text" name="manufacturer" id="manufacturer" value="<%= @item.manufacturer%>"/>
+    <label for="manufacturer"> Select Manufacturer:</label>
+    <select name="manufacturer" id="manufacturer" value="<%= @item.manufacturer%>">
+      <option value="<%@item.manufacturer%>">(<%= @item.manufacturer%>)</option>
+      <option value="AMD">AMD</option>
+      <option value="Cisco">Cisco</option>
+      <option value="Dell">Dell</option>
+      <option value="EMC">EMC</option>
+      <option value="HP">HP</option>
+      <option value="IBM">IBM</option>
+      <option value="Intel">Intel</option>
+      <option value="Seagate">Seagate</option>
+      <option value="Western Digital">Western Digital</option>
+    </select>
   </div>
 
   <div class="form-el">
@@ -18,14 +29,26 @@
     <input type="text" name="description" id="description" value="<%= @item.description%>"/>
   </div>
 
+
   <div class="form-el">
-    <label for="category">Category:</label>
-    <input type="text" name="category" id="category" value="<%= @item.category%>"/>
+    <label for="category"> Select Category:</label>
+    <select name="category" id="category" value="<%= @item.category%>">
+      <option value="<%@item.category%>">(<%=@item.category%>)</option>
+      <option value="CPU">CPU</option>
+      <option value="HDD">HDD</option>
+      <option value="RAM">RAM</option>
+      <option value="SSD">SSD</option>
+    </select>
   </div>
 
   <div class="form-el">
-    <label for="condition">Condition:</label>
-    <input type="text" name="condition" id="condition" value="<%= @item.condition%>"/>
+    <label for="condition"> Select Condition:</label>
+    <select name="category" id="category">
+      <option value="<%@item.condition%>">(<%= @item.condition%>)</option>
+      <option value="New">New</option>
+      <option value="Refurb">Refurb</option>
+      <option value="Used">Used</option>
+    </select>
   </div>
 
   <div class="form-el">
@@ -35,12 +58,17 @@
 
   <div class="form-el">
     <label for="quantity">Quantity:</label>
-    <input type="text" name="quantity" id="quantity" value="<%= @item.quantity%>"/>
+    <input type="number" name="quantity" id="quantity" value="<%= @item.quantity%>"/>
   </div>
 
   <div class="form-el">
-    <label for="supplier_id">Supplier ID:</label>
-    <input type="text" name="supplier_id" id="supplier_id" value="<%= @item.supplier_id%>"/>
+    <label for="supplier_id">Select Supplier:</label>
+      <select name="supplier_id" id="supplier_id">
+        <option value="<%@item.get_supplier.id%>">(<%= @item.get_supplier.company_name%>)</option>
+        <% @suppliers.each do |supplier| %>
+          <option value=<%= supplier.id %>><%= supplier.company_name %></option>
+        <% end %>
+      </select>
   </div>
 
   <div class="form-el">

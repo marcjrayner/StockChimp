@@ -22,6 +22,7 @@ end
 
 get '/inventory/:id/edit' do
   @item = Item.find(params['id'].to_i)
+  @suppliers = Supplier.all
   erb (:"item/edit")
 end
 
