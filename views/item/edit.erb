@@ -61,10 +61,11 @@
     <input type="number" name="quantity" id="quantity" value="<%= @item.quantity%>"/>
   </div>
 
+
   <div class="form-el">
     <label for="supplier_id">Select Supplier:</label>
       <select name="supplier_id" id="supplier_id">
-        <option value="<%@item.get_supplier.id%>">(<%= @item.get_supplier.company_name%>)</option>
+        <option value="<%=@item.supplier_id%>">(<%= @item.get_supplier.company_name%>)</option>
         <% @suppliers.each do |supplier| %>
           <option value=<%= supplier.id %>><%= supplier.company_name %></option>
         <% end %>
@@ -85,6 +86,9 @@
     <label for="min_sell_price">Minimum Sell Price:</label>
     <input type="text" name="min_sell_price" id="min_sell_price" value="<%= @item.min_sell_price%>"/>
   </div>
+
+
+
 
   <div class="form-el">
     <input type="submit" value="Update Item Record"/>
