@@ -21,7 +21,7 @@
   <% for item in @supplier.get_items %>
   <tr>
     <td><%= item.manufacturer %></td>
-    <td><a href="inventory/<%= item.id %>"><%= item.part_number %></a></td>
+    <td><a href="/inventory/<%= item.id %>"><%= item.part_number %></a></td>
     <td><%= item.description %></td>
     <td><%= item.category %></td>
     <td><%= item.condition %></td>
@@ -35,5 +35,5 @@
 </table>
 
 <p class="">
-  <a class=""href="/suppliers/edit/<%=@supplier.id%>">Edit supplier</a>
+  <a class=""href="/suppliers/<%=@supplier.id%>/edit">Edit supplier</a>
 </p>
