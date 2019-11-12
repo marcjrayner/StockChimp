@@ -1,33 +1,33 @@
 <h2>Edit <%= @supplier.company_name %></h2>
 
 <form method="POST" action="/suppliers/<%= @supplier.id %>">
-  <div class="form-wrapper">
-  <div class="form-el">
+  <div class="form-whole">
+  <div class="form-entry">
     <label for="company_name">Company Name:</label>
     <input type="text" name="company_name" id="company_name" value="<%= @supplier.company_name%>"/>
   </div>
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="address">Address:</label>
     <input type="text" name="address" id="address" value="<%= @supplier.address%>"/>
   </div>
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="contact_name">Contact Name:</label>
     <input type="text" name="contact_name" id="contact_name" value="<%= @supplier.contact_name%>"/>
   </div>
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="contact_job_title">Contact Job Title:</label>
     <input type="text" name="contact_job_title" id="contact_job_title" value="<%= @supplier.contact_job_title%>"/>
   </div>
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="contact_phone_number">Contact Phone Number:</label>
     <input type="text" name="contact_phone_number" id="contact_phone_number" value="<%= @supplier.contact_phone_number%>"/>
   </div>
 
-  <div class="form-el">
+  <div class="form-entry">
     <input type="submit" value="Update Supplier Record"/>
   </div>
   </div>

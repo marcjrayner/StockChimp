@@ -1,14 +1,14 @@
 <h2>Edit Record for <%= @item.manufacturer%> <%=@item.part_number %></h2>
 
 <form method="POST" action="/inventory/<%= @item.id %>">
-  <div class="form-wrapper">
+  <div class="form-whole">
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="part_number">Part Number:</label>
     <input type="text" name="part_number" id="part_number" value="<%= @item.part_number%>"/>
   </div>
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="manufacturer"> Select Manufacturer:</label>
     <select name="manufacturer" id="manufacturer" value="<%= @item.manufacturer%>">
       <option value="<%@item.manufacturer%>">(<%= @item.manufacturer%>)</option>
@@ -24,13 +24,13 @@
     </select>
   </div>
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="description"> Description:</label>
     <input type="text" name="description" id="description" value="<%= @item.description%>"/>
   </div>
 
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="category"> Select Category:</label>
     <select name="category" id="category" value="<%= @item.category%>">
       <option value="<%@item.category%>">(<%=@item.category%>)</option>
@@ -41,7 +41,7 @@
     </select>
   </div>
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="condition"> Select Condition:</label>
     <select name="category" id="category">
       <option value="<%@item.condition%>">(<%= @item.condition%>)</option>
@@ -51,18 +51,18 @@
     </select>
   </div>
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="status">Status:</label>
     <input type="text" name="status" id="status" value="<%= @item.status%>"/>
   </div>
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="quantity">Quantity:</label>
     <input type="number" name="quantity" id="quantity" value="<%= @item.quantity%>"/>
   </div>
 
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="supplier_id">Select Supplier:</label>
       <select name="supplier_id" id="supplier_id">
         <option value="<%=@item.supplier_id%>">(<%= @item.get_supplier.company_name%>)</option>
@@ -72,23 +72,23 @@
       </select>
   </div>
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="unit_buy_price">Unit Buy Price:</label>
     <input type="text" name="unit_buy_price" id="unit_buy_price" value="<%= @item.unit_buy_price%>"/>
   </div>
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="target_sell_price">Target Sell Price:</label>
     <input type="text" name="target_sell_price" id="target_sell_price" value="<%= @item.target_sell_price%>"/>
   </div>
 
-  <div class="form-el">
+  <div class="form-entry">
     <label for="min_sell_price">Minimum Sell Price:</label>
     <input type="text" name="min_sell_price" id="min_sell_price" value="<%= @item.min_sell_price%>"/>
   </div>
 
 
-  <div class="form-el">
+  <div class="form-entry">
     <input type="submit" value="Update Item Record"/>
   </div>
 
