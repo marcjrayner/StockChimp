@@ -1,10 +1,10 @@
 <h1><%= @supplier.company_name %></h1>
 <% if @supplier.id >1 %>
-<h3>Address: <%= @supplier.address()%> </h3>
-<h3>Contact: <%= @supplier.contact_name()%> </h3>
-<h3>Contact Job Title: <%= @supplier.contact_job_title()%> </h3>
-<h3>Contact Phone Number: <%= @supplier.contact_phone_number()%> </h3>
-<h3>Items bought from <%= @supplier.company_name %>:</h3>
+<h3>Address: &nbsp;&nbsp;<%= @supplier.address()%> </h3>
+<h3>Contact: &nbsp;&nbsp;<%= @supplier.contact_name()%> </h3>
+<h3>Contact Job Title: &nbsp;&nbsp;<%= @supplier.contact_job_title()%> </h3>
+<h3>Contact Phone Number: &nbsp;&nbsp;<%= @supplier.contact_phone_number()%> </h3>
+<h3>Items bought from &nbsp;&nbsp;<%= @supplier.company_name %>:</h3>
 <hr>
 <% end %>
 

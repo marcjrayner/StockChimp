@@ -1,15 +1,15 @@
 <h1><%= @item.part_number %></h1>
 
-<h3>Manufacturer: <%= @item.manufacturer()%> </h3>
-<h3>Description: <%= @item.description()%> </h3>
-<h3>Category: <%= @item.category()%> </h3>
-<h3>Condition: <%= @item.condition()%> </h3>
-<h3>Quantity in Stock: <%= @item.quantity()%> </h3>
-<h3>Status: <%= @item.status()%> </h3>
-<h3>Supplier: <a href="/suppliers/<%= @item.supplier_id %>"><%=@item.get_supplier.company_name()%></a> </h3>
-<h3>Unit Buy Price: <%= @item.unit_buy_price()%> </h3>
-<h3>Target Sell Price: <%= @item.target_sell_price()%> </h3>
-<h3>Minimum Sell Price: <%= @item.min_sell_price()%> </h3>
+<h3>Manufacturer:&nbsp;&nbsp;<%=@item.manufacturer()%> </h3>
+<h3>Description: &nbsp;&nbsp;<%= @item.description()%> </h3>
+<h3>Category: &nbsp;&nbsp;<%= @item.category()%> </h3>
+<h3>Condition: &nbsp;&nbsp;<%= @item.condition()%> </h3>
+<h3>Quantity in Stock: &nbsp;&nbsp;<%= @item.quantity()%> </h3>
+<h3>Status: &nbsp;&nbsp;<%= @item.status()%> </h3>
+<h3>Supplier: &nbsp;&nbsp;<a href="/suppliers/<%= @item.supplier_id %>"><%=@item.get_supplier.company_name()%></a> </h3>
+<h3>Unit Buy Price: &nbsp;&nbsp;<%= @item.unit_buy_price()%> </h3>
+<h3>Target Sell Price: &nbsp;&nbsp;<%= @item.target_sell_price()%> </h3>
+<h3>Minimum Sell Price: &nbsp;&nbsp;<%= @item.min_sell_price()%> </h3>
 
 <p class="">
   <a class=""href="/inventory/<%=@item.id%>/edit">Edit Item</a>
