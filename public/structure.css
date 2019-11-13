@@ -23,7 +23,7 @@ a, a:link, a:visited {
 }
 
 a:hover, a:active, a:focus {
-  color: #c6e2ff;
+  color: #C1C4C9;
 }
 
 nav {
@@ -31,7 +31,7 @@ nav {
   margin: 0px;
   padding-right: 25px;
   position: fixed;
-  border-right: 1px solid #003AB7;
+  border-right: 1px solid grey;
 }
 
 nav ul li {
