@@ -37,3 +37,9 @@ post '/inventory/:id' do
   item.update
   redirect to '/inventory'
 end
+
+post '/inventory/:id/delete' do
+  item = Item.find(params['id'])
+  item.delete
+  redirect to '/inventory'
+end

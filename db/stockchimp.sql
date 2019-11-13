@@ -20,7 +20,7 @@ CREATE TABLE items
   condition VARCHAR(255),
   status VARCHAR(255),
   quantity INT4,
-  supplier_id INT8 REFERENCES suppliers(id) ON DELETE SET NULL,
+  supplier_id INT8 DEFAULT 1 REFERENCES suppliers(id) ON DELETE SET DEFAULT,
   unit_buy_price MONEY,
   target_sell_price MONEY,
   min_sell_price MONEY

@@ -24,6 +24,11 @@ get '/suppliers/:id/edit' do
   erb (:"supplier/edit")
 end
 
+get '/suppliers/:id/edit/delete' do
+  @supplier = Supplier.find(params['id'].to_i)
+  erb (:"supplier/delete")
+end
+
 post '/suppliers' do
   supplier = Supplier.new(params)
   supplier.save
@@ -33,5 +38,11 @@ end
 post '/suppliers/:id' do
   supplier = Supplier.new(params)
   supplier.update
+  redirect to '/suppliers'
+end
+
+post '/suppliers/:id/delete' do
+  supplier = Supplier.find(params['id'])
+  supplier.delete
   redirect to '/suppliers'
 end
