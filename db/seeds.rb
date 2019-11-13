@@ -2,6 +2,7 @@ require_relative('../models/supplier.rb')
 require_relative('../models/item.rb')
 require('pry-byebug')
 
+Item.delete_all
 Supplier.delete_all
 
 supplier1 = Supplier.new({
@@ -101,7 +102,7 @@ item1 = Item.new({
     'condition' => 'New',
     'status' => 'In Stock',
     'quantity' => 5,
-    'supplier_id' => supplier1.id,
+    'supplier_id' => supplier4.id,
     'unit_buy_price' => 370.00,
     'target_sell_price' => 450.00,
     'min_sell_price' => 400.00
@@ -114,7 +115,7 @@ item2 = Item.new({
     'condition' => 'New',
     'status' => 'In Stock',
     'quantity' => 50,
-    'supplier_id' => supplier1.id,
+    'supplier_id' => supplier4.id,
     'unit_buy_price' => 420.00,
     'target_sell_price' => 550.00,
     'min_sell_price' => 450.00
@@ -146,7 +147,7 @@ item4 = Item.new({
     'min_sell_price' => 260.00
   })
 item5 = Item.new({
-    'AMD' => '300G',
+    'part_number' => '300G',
     'manufacturer' => 'AMD',
     'description' => '8 Core Processor',
     'category' => 'CPU',
@@ -166,7 +167,7 @@ item6= Item.new({
     'condition' => 'New',
     'status' => 'In Stock',
     'quantity' => 10,
-    'supplier_id' => supplier1.id,
+    'supplier_id' => supplier4.id,
     'unit_buy_price' => 65.00,
     'target_sell_price' => 80.00,
     'min_sell_price' => 70.00
@@ -205,7 +206,7 @@ item9 = Item.new({
     'condition' => 'New',
     'status' => 'In Stock',
     'quantity' => 245,
-    'supplier_id' => supplier1.id,
+    'supplier_id' => supplier4.id,
     'unit_buy_price' => 200.00,
     'target_sell_price' => 220.00,
     'min_sell_price' => 205.00
@@ -309,7 +310,7 @@ item17 = Item.new({
     'condition' => 'Used',
     'status' => 'In Stock',
     'quantity' => 14,
-    'supplier_id' => supplier1.id,
+    'supplier_id' => supplier4.id,
     'unit_buy_price' => 5.00,
     'target_sell_price' => 10.00,
     'min_sell_price' => 5.00
@@ -348,7 +349,7 @@ item20 = Item.new({
     'condition' => 'Refurb',
     'status' => 'In Stock',
     'quantity' => 40,
-    'supplier_id' => supplier1.id,
+    'supplier_id' => supplier4.id,
     'unit_buy_price' => 370.00,
     'target_sell_price' => 450.00,
     'min_sell_price' => 400.00
@@ -361,7 +362,7 @@ item21 = Item.new({
     'condition' => 'Refurb',
     'status' => 'In Stock',
     'quantity' => 54,
-    'supplier_id' => supplier1.id,
+    'supplier_id' => supplier4.id,
     'unit_buy_price' => 420.00,
     'target_sell_price' => 550.00,
     'min_sell_price' => 450.00
@@ -392,8 +393,21 @@ item23 = Item.new({
     'target_sell_price' => 300.00,
     'min_sell_price' => 260.00
   })
+item24 = Item.new({
+    'part_number' => 'i7-114q',
+    'manufacturer' => 'Intel',
+    'description' => 'Quad Core Processor',
+    'category' => 'CPU',
+    'condition' => 'New',
+    'status' => 'In Stock',
+    'quantity' => 1,
+    'supplier_id' => supplier2.id,
+    'unit_buy_price' => 50.00,
+    'target_sell_price' => 100.00,
+    'min_sell_price' => 70.00
+  })
 item25 = Item.new({
-    'AMD' => '300G',
+    'part_number' => '300G',
     'manufacturer' => 'AMD',
     'description' => '8 Core Processor',
     'category' => 'CPU',
@@ -413,7 +427,7 @@ item26= Item.new({
     'condition' => 'Used',
     'status' => 'In Stock',
     'quantity' => 10,
-    'supplier_id' => supplier1.id,
+    'supplier_id' => supplier4.id,
     'unit_buy_price' => 65.00,
     'target_sell_price' => 80.00,
     'min_sell_price' => 70.00
@@ -452,7 +466,7 @@ item29 = Item.new({
     'condition' => 'Refurb',
     'status' => 'In Stock',
     'quantity' => 53,
-    'supplier_id' => supplier1.id,
+    'supplier_id' => supplier4.id,
     'unit_buy_price' => 200.00,
     'target_sell_price' => 220.00,
     'min_sell_price' => 205.00
@@ -557,7 +571,7 @@ item37 = Item.new({
     'condition' => 'New',
     'status' => 'In Stock',
     'quantity' => 50,
-    'supplier_id' => supplier1.id,
+    'supplier_id' => supplier4.id,
     'unit_buy_price' => 5.00,
     'target_sell_price' => 10.00,
     'min_sell_price' => 5.00
@@ -608,6 +622,25 @@ item16.save()
 item17.save()
 item18.save()
 item19.save()
+item20.save()
+item21.save()
+item22.save()
+item23.save()
+item24.save()
+item25.save()
+item26.save()
+item27.save()
+item28.save()
+item29.save()
+item30.save()
+item31.save()
+item32.save()
+item33.save()
+item34.save()
+item35.save()
+item36.save()
+item37.save()
+item38.save()
 
 
 binding.pry()
