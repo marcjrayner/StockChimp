@@ -14,12 +14,14 @@
   </tr>
   <% for supplier in @suppliers %>
   <tr>
+    <% if supplier.id > 1 %>
     <td><a href="suppliers/<%= supplier.id %>"><%= supplier.company_name %></a>
     </td>
     <td><%= supplier.address %></td>
     <td><%= supplier.contact_name %></td>
     <td><%= supplier.contact_job_title%></td>
     <td><%= supplier.contact_phone_number %></td>
+    <% end %>
   </tr>
   <% end %>
 </table>
