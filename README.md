@@ -1,5 +1,7 @@
 # StockChimp
 
+Principles including MVC, conditional logic, data manipulation & data persistence. I used Ruby, Sinatra and PostgreSQL to create a fully functional crud app.
+
 StockChimp takes inspiration from my previous experience of SaaS products & inventory management tools. 
 
 I went for a clean UI with simple, familiar functionality for an app which has a simple purpose: for a "parts & spares" eCommerce vendor to keep track of their warehouse stock. 
