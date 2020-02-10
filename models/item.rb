@@ -106,6 +106,14 @@ class Item
     return items.map { |i| Item.new(i) }
   end
 
+
+  # Method to find a specific item in inventory. Method name -> find
+  # Need to call method on entire class to find one object of that class -> self
+  # Need a unique identifier to find a specific object and return correct data -> (id)
+  # Pass a SQL query to the database to SELECT the specified object from the "items" table
+  # Save the result data of the SQL query to a variable "s"
+  # Instantiate a new Ruby Item object using the data stored in "s"
+
   def self.find(id)
     sql = "SELECT * FROM items
     WHERE id = $1;"
